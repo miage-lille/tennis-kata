@@ -1,0 +1,5 @@
+wrap-comments=true
+field-space=tight
+profile=sparse
+break-cases=fit-or-vertical
+cases-matching-exp-indent=normal
