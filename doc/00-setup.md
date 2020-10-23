@@ -41,7 +41,7 @@ You need to :
 
 1. Install terminator : `sudo apt-get install terminator`
 2. Install Oh-My-Zsh : `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-3. Install [starship]https://starship.rs/guide/#%F0%9F%9A%80-installation) :
+3. Install [starship](https://starship.rs/guide/#%F0%9F%9A%80-installation) :
 
 ```sh
 wget -O- https://starship.rs/install.sh | bash
