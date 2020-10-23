@@ -63,7 +63,7 @@ echo 'add_newline = false\n\n[character]\nsymbol = "➜"\n[git_branch]\nsymbol =
 
 1. Install iTerm2 : `brew cask install iterm2`
 2. Install Oh-My-Zsh : `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-3. Install [starship]https://starship.rs/guide/#%F0%9F%9A%80-installation) :
+3. Install [starship](https://starship.rs/guide/#%F0%9F%9A%80-installation) :
 
 ```sh
 brew install starship
