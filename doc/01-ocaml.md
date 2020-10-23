@@ -31,19 +31,19 @@ The reference itself is immutable but you can change the refered value with `:=`
 
 ```OCaml
 let mut_score: int ref = ref 10
-let _ = mut_score := 5
+let () = mut_score := 5
 let five: int = !mut_score
 let string_five: string = string_of_int five
-let _ = print_endline string_five (*OCaml function's call doesn't need parenthesis*)
+let () = print_endline string_five (*OCaml function's call doesn't need parenthesis*)
 ```
 
 However, you may create a new binding of the same name which shadows the previous binding :
 
 ```OCaml
 let greeting: string = "hello"
-let _ = print_endline greeting
+let () = print_endline greeting
 let greeting: string =  "bye"
-let _ = print_endline greeting
+let () = print_endline greeting
 ```
 
 #### Types
@@ -154,8 +154,8 @@ let is_equiped w =
 let unequiped: gear = None
 let racket: gear = Some "racket"
 (* OCaml isn't pure and that's fine *)
-let _ = print_endline (is_equiped unequiped)
-let _ = print_endline (is_equiped racket)
+let () = print_endline (is_equiped unequiped)
+let () = print_endline (is_equiped racket)
 ```
 
 #### Functions
@@ -169,7 +169,7 @@ let add: int -> int -> int  = fun x  -> fun y  -> x + y (* OCaml auto-curry func
 let add (x:int) (y:int) : int = x + y (* shorter syntax *)
 let add x y = x + y (* shorter syntax with type inference *)
 
-let _ = let four = add 1 3 in print_endline (string_of_int four)
+let () = let four = add 1 3 in print_endline (string_of_int four)
 ```
 
 For readablity, OCaml developers perfer the first version `let add: int -> int -> int = fun x y -> x + y` when they must explicit the function's type, or the last one `let add x y = x + y ` when type inference works which is often the case when you have a real implementation.
@@ -177,7 +177,7 @@ For readablity, OCaml developers perfer the first version `let add: int -> int -
 Functions does not need parentheses to be applied but they are evaluated left-to-right, so you may need parentheses to delimitate an expression. In the exemple above, `print_endline` take a string but `string_of_int` has type `int -> string` but `string_of_int four` has type `string`. You can reduce the need of parentheses with the use of application operator `@@`
 
 ```OCaml
-let _ = let four = add 1 3 in print_endline @@ string_of_int four
+let () = let four = add 1 3 in print_endline @@ string_of_int four
 ```
 
 OCaml function are auto-curried.
@@ -202,9 +202,25 @@ let twenty2 = multiply2 (multiply2 5)
 (* same as *)
 let twenty3 = multiply2 @@ multiply2 5
 
-let _ = twenty |> string_of_int |> print_endline (* same as print_endline(string_of_int(twenty)) *)
+let () = twenty |> string_of_int |> print_endline (* same as print_endline(string_of_int(twenty)) *)
 ```
 
+#### Binding effects
+
+You may notice some `let () = ...` : this means we are binding the expression to the unit value `()`. Unit is a type that have only one value `()` which represent the absence of value (similar to `void` in C-like langs). Pure effect expression, like `print_endline "hello world"` returns `unit` type.
+
+It a good practice to bind this kind of expressions to `()`. So we can write `let () = print_endline "hello world"`.
+
+Sometime you may bind an expression that you will not use the result latter.
+In thoose cases, the good practice is to bind the expressoin to `_`. `_` means "I know there is something here and I explicitly say I will not use it, so I don't name it". Notice that `_`  can be used in a pattern as a wildcard: it matches values of any type and does not bind any name.
+
+```Ocaml
+let () = print_endline "Welcome Mr. Djokovic" (* there is a type check that ensure print_endline "Welcome Mr. Djokovic" returns unit value *)
+let _ =  print_endline "Welcome Mr. Djokovic" (* works but the compiler will not validate that the right part returns unit *)
+let _ = "Djokovic"
+let (player, _) : (string * int) = ("Djokovic", 11260 ) (* binds "Djokovic" to the identifier player and checks the type is string ; drop 11260 *)
+```
+ 
 #### Modules
 
 OCaml incorporates a modular programming system. Modules provide an encapsulation mechanism and allow code to be organized into logical units, providing useful namespaces when using them.
