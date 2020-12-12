@@ -48,7 +48,7 @@ let () = print_endline greeting
 
 #### Types
 
-The type system is completely "sound". This means that, as long as your code compiles fine, every type guarantees that it's not lying about itself. In a conventional, best-effort type system, just because the type says it's e.g. "an integer that's never null", doesn't mean it's actually never null. In contrast, a pure Reason program has no null bugs.
+The type system is completely "sound". This means that, as long as your code compiles fine, every type guarantees that it's not lying about itself. In a conventional, best-effort type system, just because the type says it's e.g. "an integer that's never null", doesn't mean it's actually never null. In contrast, a pure OCaml program has no null or undefined bugs.
 
 OCaml types can be inferred. The type system deduces the types for you even if you don't manually write them down.
 
