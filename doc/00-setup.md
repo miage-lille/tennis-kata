@@ -7,7 +7,7 @@
 - It provides an unique CLI to manage many tools
 - It supports native packages hosted on [opam](http://opam.ocaml.org/) and [npm](https://www.npmjs.com/).
 - It uses [Dune](https://dune.build/) build system.
-- It eases the project settings with a main manigest `package.json`.
+- It eases the project settings with a main manifest `package.json`.
 - It sandboxes dependencies per project;
 - It simplifies Dune's configuration with [pesy](https://github.com/esy/pesy)
 
@@ -35,7 +35,7 @@ You need to :
 
 > If you have space in your username, you're doomed ¯\_(ツ)\_/¯ ; use Linux or try WSL2 (require a Windows Insider Program account)
 
-## Get de decent terminal (optional)
+## Get de decent terminal & Text editor (optional)
 
 ### Ubuntu or Debian
 
