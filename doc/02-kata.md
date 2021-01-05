@@ -1,12 +1,12 @@
 # Tennis Kata
 
-_This Kata is an adaptation to ocamlML of [Mark Seeman's serie of articles about property-based testing](http://blog.ploeh.dk/2016/02/10/types-properties-software/). Most of his article's exemples are un F#. I highly recommand the reading of his blog if you're interested by functional programming._
+_This Kata is an adaptation to OCaml of [Mark Seeman's serie of articles about property-based testing](http://blog.ploeh.dk/2016/02/10/types-properties-software/). Most of his article's exemples are un F#. I highly recommand the reading of his blog if you're interested by functional programming._
 
 ## About type systems
 
 [Hindley–Milner type systems](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) implemented in ML languages such as ocamlML, OCaml, Haskell or F#, offers more safety from static typing alone.
 
-With the algebraic data types available in ocamlML, you can design your types so that illegal states are unrepresentable. You can see this as "free" tests for your application.
+With the algebraic data types available in OCaml, you can design your types so that illegal states are unrepresentable. You can see this as "free" tests for your application.
 
 We will illustrate it by the Tennis Kata
 
