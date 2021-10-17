@@ -1,8 +1,5 @@
-(* -*- tuareg -*- *)
-
-open Jbuild_plugin.V1
-
-let () =
-  run_and_read_lines ("pesy dune-file " ^ Sys.getcwd ())
-  |> String.concat "\n"
-  |> send
+(executable
+ (name Runner)
+ (libraries tennis.test alcotest)
+ (modes native)
+ (public_name test-tennis))

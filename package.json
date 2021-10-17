@@ -1,6 +1,6 @@
 {
   "name": "tennis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tennis Kata to explore ADT in OCaml",
   "license": "MPL-2.0",
   "scripts": {
@@ -11,53 +11,16 @@
   "devDependencies": {
     "@opam/alcotest": "1.2.3",
     "@opam/dune": ">=2.7",
-    "ocaml": "~4.10",
+    "ocaml": ">=4.12",
     "@opam/reason": "*",
-    "@pesy/esy-pesy": "0.1.0-alpha.11",
     "@opam/ocamlformat": "*",
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
   },
   "esy": {
     "build": "dune build -p #{self.name}",
-    "buildDev": "pesy build",
     "release": {
       "releasedBinaries": [
         "tennis"
-      ]
-    }
-  },
-  "buildDirs": {
-    "lib": {
-      "namespace": "Tennis",
-      "name": "tennis.lib",
-      "require": []
-    },
-    "bin": {
-      "main": "tennis_app",
-      "bin": "tennis_app.ml",
-      "name": "tennis",
-      "require": [
-        "tennis.lib"
-      ]
-    },
-    "test": {
-      "namespace": "SUT",
-      "name": "tennis.test",
-      "ocamloptFlags": [
-        "-linkall",
-        "-g"
-      ],
-      "require": [
-        "tennis.lib",
-        "alcotest"
-      ]
-    },
-    "test-runner": {
-      "main": "test_tennis",
-      "bin": "runner.ml",
-      "name": "test-tennis",
-      "require": [
-        "tennis.test"
       ]
     }
   }
