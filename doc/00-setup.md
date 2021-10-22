@@ -62,7 +62,7 @@ That's it !
 
 ### 2nd solution: Remote setup with Gitpod
 
-**This solution is convenient if you works on old computer or from different computers**
+**This solution is convenient if you work on old computer or from different computers**
 
 1. Create a https://gitpod.io account
 2. Install gitpod browser extension https://www.gitpod.io/docs/browser-extension
