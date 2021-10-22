@@ -56,7 +56,7 @@ Choose one of thoose
 1. Install Docker: https://code.visualstudio.com/docs/remote/containers#_system-requirements
 2. On MacOS or Windows, start Docker Desktop.
 3. Install vscode remote development plugin https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
-4. All projects come with `.devcontainer` folder. (Reopen the project in container)[https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container]
+4. All projects come with `.devcontainer` folder. [Reopen the project in container](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container)
 
 That's it ! 
 
