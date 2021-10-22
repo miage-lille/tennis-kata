@@ -24,5 +24,5 @@
     // 		"onAutoForward": "silent"
     // },
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "esy",
+    "postCreateCommand": "esy install && esy",
 }

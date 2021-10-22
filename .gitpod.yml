@@ -1,0 +1,6 @@
+image:
+  file: .devcontainer/Dockerfile
+tasks:
+  - name: Build
+    init: esy install
+    command: esy
