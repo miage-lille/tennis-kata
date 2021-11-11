@@ -54,6 +54,8 @@ A tennis match consists of multiple sets that again are played as several games,
 This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with.
 <br/>(∩ ｀-´)⊃━ ☆ .\*･｡ﾟ
 
+Along this Kata we will iterate on the implementation of the game and the associated unit tests.
+
 ### Type Driven Development
 
 #### Players
