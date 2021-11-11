@@ -1,3 +1,5 @@
 (library
  (name Tennis)
- (public_name tennis.lib))
+ (public_name tennis.lib)
+ (ocamlc_flags
+  (:standard -warn-error -a+31+8)))
