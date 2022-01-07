@@ -370,13 +370,13 @@ And add a test for the third property :
 
 ```ocaml
 let given_player_one_at_40_other_at_15_when_other_wins () =
-  let forty_love = { player = Player_one; other_point = Love } in
+  let forty_fifteen = { player = Player_one; other_point = Fifteen } in
   let forty_thirty = { player = Player_one; other_point = Thirty } in
   let winner = other_player forty_thirty.player in
   Alcotest.(check score)
     "score is 40 / 30"
     Forty forty_thirty
-    (score_when_forty forty_love winner)
+    (score_when_forty forty_fifteen winner)
 ```
 
 Iterate our implementation of `score_when_forty` to make the tests pass ! (•̀ᴗ•́)و
