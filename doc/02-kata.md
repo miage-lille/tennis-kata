@@ -340,7 +340,7 @@ let given_player_one_at_40_when_player_one_wins () =
   let forty_thirty = { player = Player_one; other_point = Thirty } in
   let winner = forty_thirty.player in
   Alcotest.(check score)
-    "score is Deuce"
+    "score is Game for Player_one"
     (* to change when we will know how represent Advantage *)
     (Game Player_one)
     (score_when_forty forty_thirty winner)
